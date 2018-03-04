@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Exam Api</title>
+    </head>
+    <body>
+        All Test and Exam goes here
+    <div class="test">
+        
+    </div>
+    <div class="exam">
+        
+    </div>
+    </body>
+    <script src="assets/jquery.min.js"></script>    
+    <!--<script src="assets/index.js"></script>-->
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                    url:"inc/retrive_assesment.php",
+                    method:"GET",
+                    dataType:"text",
+                    success:function(data)
+                    {
+                        $('.test').html(data)
+                    }
+            });  
+        }); 
+        // $(document).ajaxComplete(function(){
+        //     $('#getid').click(function(){
+        //         var ids = $(this).attr("data-id");
+        //         $.ajax({
+        //             url:"inc/retrivequestions.php",                    
+        //             data:{ids:ids},
+        //             method:"POST",
+        //             dataType:"text",
+        //             success:function(data)
+        //             {
+        //                 console.log(data)
+        //             }
+        //         }); 
+        //     })
+        // })
+    </script>
+</html>
